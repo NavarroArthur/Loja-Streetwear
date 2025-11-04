@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Loja de roupas moderna com as melhores tendências em moda. Descubra nossa coleção de camisetas, calças, casacos e acessórios.">
+    <meta name="keywords" content="loja de roupas, moda, roupas, camisetas, calças, casacos, fashion">
+    <meta name="author" content="Fashion Store">
+    <title>TRAP STREET - Streetwear e Cultura Urbana</title>
+    <link rel="icon" type="image/png" href="icon A v 1 full white.png">
+    <link rel="shortcut icon" type="image/png" href="icon A v 1 full white.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Nosifer&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="icon A v 1 full white.png" alt="TRAP STREET Logo" class="logo-img">
+                </div>
+                <nav class="nav-menu" id="navMenu">
+                    <button class="nav-link active" data-tab="home">INÍCIO</button>
+                    <button class="nav-link" data-tab="catalog">CATÁLOGO</button>
+                    <button class="nav-link" data-tab="checkout">CAIXA</button>
+                </nav>
+                <div class="header-actions">
+                    <button class="search-btn" id="searchBtn">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16z" stroke="currentColor" stroke-width="2"/>
+                            <path d="m19 19-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <button class="cart-btn" id="cartBtn">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M3 3h2l.4 2M7 13h10l-4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar" id="searchBar">
+        <div class="container">
+            <input type="text" placeholder="Buscar produtos..." id="searchInput">
+            <button class="close-search" id="closeSearch">✕</button>
+        </div>
+    </div>
+
+    <!-- Tab Content Container -->
+    <main class="main-content">
+        <!-- HOME TAB -->
+        <div class="tab-content active" id="homeTab">
+            <!-- Hero Section -->
+            <section class="hero">
+                <video class="hero-video" autoplay muted loop playsinline>
+                    <source src="Alee - Madureira.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos.
+                </video>
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">STREETWEAR</h1>
+                    <p class="hero-subtitle">URBANO. ESCURO. REAL.</p>
+                    <button class="btn btn-primary" onclick="switchTab('catalog')">EXPLORAR</button>
+                </div>
+            </section>
+
+            <!-- Featured Products Section -->
+            <section class="featured-products">
+                <div class="container">
+                    <h2 class="section-title">ITENS MAIS VENDIDOS</h2>
+                    <div class="products-grid" id="featuredProductsGrid">
+                        <!-- Featured products will be inserted here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Brand Identity Section -->
+            <section class="brand-identity">
+                <div class="brand-visual">
+                    <img src="Site Alee base test.png" alt="Identidade Visual TRAP STREET" class="brand-image" id="brandImage">
+                </div>
+            </section>
+
+            <!-- Catalog Products Section -->
+            <section class="catalog-showcase">
+                <div class="container">
+                    <h2 class="section-title">NOSSOS PRODUTOS</h2>
+                    <div class="products-grid" id="catalogShowcaseGrid">
+                        <!-- Products will be inserted here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="about">
+                <div class="container">
+                    <div class="about-content">
+                        <div class="about-text">
+                            <h2 class="section-title">SOBRE NÓS</h2>
+                            <p>Somos uma marca de streetwear que representa a cultura urbana e o estilo trap. Nossa missão é trazer roupas que expressam atitude, autenticidade e personalidade.</p>
+                            <p>Cada peça é selecionada para quem busca um visual dark, agressivo e real. Estamos na rua, nas ruas, representando o verdadeiro estilo urbano.</p>
+                        </div>
+                        <div class="about-image">
+                            <img src="Filipe-Ret-Nume-9-1-1-scaled.webp" alt="Sobre Nós" class="about-img">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="contact">
+                <div class="container">
+                    <h2 class="section-title">CONTATO</h2>
+                    <div class="contact-content">
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <h3>📍 LOCALIZAÇÃO</h3>
+                                <p>Rua da Moda, 123<br>São Paulo, SP - 01234-567</p>
+                            </div>
+                            <div class="contact-item">
+                                <h3>📧 E-MAIL</h3>
+                                <p>contato@trapstreet.com</p>
+                            </div>
+                            <div class="contact-item">
+                                <h3>📞 TELEFONE</h3>
+                                <p>(11) 1234-5678</p>
+                            </div>
+                        </div>
+                        <form class="contact-form">
+                            <input type="text" placeholder="Nome" required>
+                            <input type="email" placeholder="Email" required>
+                            <textarea placeholder="Mensagem" rows="5" required></textarea>
+                            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- CATALOG TAB -->
+        <div class="tab-content" id="catalogTab">
+            <section class="products">
+                <div class="container">
+                    <div class="products-header">
+                        <h2 class="section-title">CATÁLOGO</h2>
+                        <div class="filter-tabs">
+                            <button class="filter-tab active" data-filter="all">TODOS</button>
+                            <button class="filter-tab" data-filter="camisas">CAMISAS</button>
+                            <button class="filter-tab" data-filter="calcas">CALÇAS</button>
+                            <button class="filter-tab" data-filter="bermudas">BERMUDAS</button>
+                            <button class="filter-tab" data-filter="acessorios">ACESSÓRIOS</button>
+                        </div>
+                    </div>
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Products will be dynamically inserted here -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- CHECKOUT TAB -->
+        <div class="tab-content" id="checkoutTab">
+            <section class="checkout">
+                <div class="container">
+                    <h2 class="section-title">FINALIZAR COMPRA</h2>
+                    <div class="checkout-content">
+                        <div class="checkout-items">
+                            <h3>ITENS DO PEDIDO</h3>
+                            <div id="checkoutItems">
+                                <!-- Checkout items will be inserted here -->
+                            </div>
+                            <div class="checkout-total">
+                                <div class="total-row">
+                                    <span>SUBTOTAL:</span>
+                                    <span id="checkoutSubtotal">R$ 0,00</span>
+                                </div>
+                                <div class="total-row">
+                                    <span>FRETE:</span>
+                                    <span id="checkoutShipping">R$ 0,00</span>
+                                </div>
+                                <div class="total-row final">
+                                    <span>TOTAL:</span>
+                                    <span id="checkoutTotal">R$ 0,00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkout-form-wrapper">
+                            <h3>DADOS DO PEDIDO</h3>
+                            <form class="checkout-form" id="checkoutForm">
+                                <div class="form-group">
+                                    <label>NOME COMPLETO</label>
+                                    <input type="text" placeholder="Digite seu nome" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>EMAIL</label>
+                                    <input type="email" placeholder="seu@email.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>TELEFONE</label>
+                                    <input type="tel" placeholder="(11) 99999-9999" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>ENDEREÇO</label>
+                                    <input type="text" placeholder="Rua, número, complemento" required>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>CIDADE</label>
+                                        <input type="text" placeholder="Cidade" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>CEP</label>
+                                        <input type="text" placeholder="00000-000" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>MÉTODO DE PAGAMENTO</label>
+                                    <select required>
+                                        <option value="">Selecione...</option>
+                                        <option value="credit">Cartão de Crédito</option>
+                                        <option value="debit">Cartão de Débito</option>
+                                        <option value="pix">PIX</option>
+                                        <option value="boleto">Boleto</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">FINALIZAR PEDIDO</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TRAP STREET</h3>
+                    <p>Streetwear & Cultura Urbana</p>
+                </div>
+                <div class="footer-section">
+                    <h4>LINKS</h4>
+                    <ul>
+                        <li><button class="footer-link" data-tab="home">INÍCIO</button></li>
+                        <li><button class="footer-link" data-tab="catalog">CATÁLOGO</button></li>
+                        <li><button class="footer-link" data-tab="checkout">CAIXA</button></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>REDES SOCIAIS</h4>
+                    <div class="social-links">
+                        <a href="#">Instagram</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TRAP STREET. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>CARRINHO</h2>
+            <button class="close-cart" id="closeCart">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <p>SEU CARRINHO ESTÁ VAZIO</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total" id="cartTotalWrapper">
+                <span>TOTAL:</span>
+                <span id="cartTotal">R$ 0,00</span>
+            </div>
+            <button class="btn btn-primary btn-block" onclick="closeCartSidebar(); switchTab('checkout')">FINALIZAR COMPRA</button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

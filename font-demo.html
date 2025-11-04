@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha da Fonte - TRAP STREET</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=MedievalSharp&family=Englebert&family=Creepster&family=Nosifer&family=Griffy&family=Fondamento:ital,wght@0,400;1,400&family=New+Rocker&family=Butcherman&family=Black+Ops+One&family=Orbitron:wght@400;500;600;700;800;900&family=Staatliches&family=Monoton&family=Aldrich&family=Iceberg&family=Wallpoet&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000;
+            color: #fff;
+            font-family: 'Rajdhani', sans-serif;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+            color: #ff0000;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .font-option {
+            background: #111;
+            border: 2px solid #222;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .font-option:hover {
+            border-color: #ff0000;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .font-option.selected {
+            border-color: #ff0000;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+            background: #1a0000;
+        }
+
+        .font-name {
+            font-size: 1rem;
+            color: #888;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .font-preview {
+            font-size: 4rem;
+            color: #ffffff;
+            text-shadow: 
+                2px 2px 0 rgba(0, 0, 0, 0.8),
+                4px 4px 0 rgba(0, 0, 0, 0.6),
+                0 0 10px rgba(255, 255, 255, 0.6),
+                0 0 20px rgba(255, 255, 255, 0.4);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .font-code {
+            font-size: 0.875rem;
+            color: #666;
+            font-family: monospace;
+            background: #000;
+            padding: 0.5rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+
+        .selected-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #ff0000;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: none;
+        }
+
+        .font-option.selected .selected-badge {
+            display: block;
+        }
+
+        .btn-confirm {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .btn-confirm:hover {
+            background: #cc0000;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .btn-confirm:disabled {
+            background: #333;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ESCOLHA A FONTE GÓTICA</h1>
+        <p style="text-align: center; margin-bottom: 3rem; color: #888;">Clique em uma fonte para selecionar. O texto de exemplo é "STREETWEAR"</p>
+
+        <div class="font-option" data-font="UnifrakturMaguntia">
+            <div class="font-name">UnifrakturMaguntia</div>
+            <div class="font-preview" style="font-family: 'UnifrakturMaguntia', cursive;">STREETWEAR</div>
+            <div class="font-code">font-family: 'UnifrakturMaguntia', cursive;</div>
+            <div class="selected-badge">SELECIONADO</div>
+        </div>
+
+        <div class="font-option" data-font="MedievalSharp">
+            <div class="font-name">MedievalSharp</div>
+            <div class="font-preview" style="font-family: 'MedievalSharp', cursive;">STREETWEAR</div>
+            <div class="font-code">font-family: 'MedievalSharp', cursive;</div>
+            <div class="selected-badge">SELECIONADO</div>
+        </div>
+
+        <div class="font-option" data-font="Englebert">
+            <div class="font-name">Englebert</div>
+            <div class="font-preview" style="font-family: 'Englebert', sans-serif;">STREETWEAR</div>
+            <div class="font-code">font-family: 'Englebert', sans-serif;</div>
+            <div class="selected-badge">SELECIONADO</div>
+        </div>
+
+        <div class="font-option" data-font="Creepster">
+            <div class="font-name">Creepster</div>
+            <div class="font-preview" style="font-family: 'Creepster', cursive;">STREETWEAR</div>
+            <div class="font-code">font-family: 'Creepster', cursive;</div>
+            <div class="selected-badge">SELECIONADO</div>
+        </div>
+
+        <div class="font-option" data-font="Nosifer">
+            <div class="font-name">Nosifer</div>
+            <div class="font-preview" style="font-family: 'Nosifer', cursive;">STREETWEAR</div>
+            <div class="font-code">font-family: 'Nosifer', cursive;</div>
+            <div class="selected-badge">SELECIONADO</div>
+        </div>
+
+        <div class="font-option" data-font="Griffy">
+            <div class="font-name">Griffy</div>
+            <div class="font-preview" style="font-family: 'Griffy', cursive;">STREETWEAR</div>
+            <div class="font-code">font-family: 'Griffy', cursive;</div>
+            <div class="selected-badge">SELECIONADO</div>
+        </div>
+
+        <div class="font-option" data-font="Fondamento">
+            <div class="font-name">Fondamento</div>
+            <div class="font-preview" style="font-family: 'Fondamento', cursive;">STREETWEAR</div>
+            <div class="font-code">font-family: 'Fondamento', cursive;</div>
+            <div class="selected-badge">SELECIONADO</div>
+        </div>
+
+        <div class="font-option" data-font="New Rocker">
+            <div class="font-name">New Rocker</div>
+            <div class="font-preview" style="font-family: 'New Rocker', cursive;">STREETWEAR</div>
+            <div class="font-code">font-family: 'New Rocker', cursive;</div>
+            <div class="selected-badge">SELECIONADO</div>
+        </div>
+
+        <div class="font-option" data-font="Butcherman">
+            <div class="font-name">Butcherman</div>
+            <div class="font-preview" style="font-family: 'Butcherman', cursive;">STREETWEAR</div>
+            <div class="font-code">font-family: 'Butcherman', cursive;</div>
+            <div class="selected-badge">SELECIONADO</div>
+        </div>
+
+        <div class="font-option" data-font="Black Ops One">
+            <div class="font-name">Black Ops One</div>
+            <div class="font-preview" style="font-family: 'Black Ops One', cursive;">STREETWEAR</div>
+            <div class="font-code">font-family: 'Black Ops One', cursive;</div>
+            <div class="selected-badge">SELECIONADO</div>
+        </div>
+
+        <div class="font-option" data-font="Orbitron">
+            <div class="font-name">Orbitron</div>
+            <div class="font-preview" style="font-family: 'Orbitron', sans-serif; font-weight: 700;">STREETWEAR</div>
+            <div class="font-code">font-family: 'Orbitron', sans-serif; font-weight: 700;</div>
+            <div class="selected-badge">SELECIONADO</div>
+        </div>
+
+        <div class="font-option" data-font="Staatliches">
+            <div class="font-name">Staatliches</div>
+            <div class="font-preview" style="font-family: 'Staatliches', cursive;">STREETWEAR</div>
+            <div class="font-code">font-family: 'Staatliches', cursive;</div>
+            <div class="selected-badge">SELECIONADO</div>
+        </div>
+
+        <div class="font-option" data-font="Monoton">
+            <div class="font-name">Monoton</div>
+            <div class="font-preview" style="font-family: 'Monoton', cursive;">STREETWEAR</div>
+            <div class="font-code">font-family: 'Monoton', cursive;</div>
+            <div class="selected-badge">SELECIONADO</div>
+        </div>
+
+        <div class="font-option" data-font="Aldrich">
+            <div class="font-name">Aldrich</div>
+            <div class="font-preview" style="font-family: 'Aldrich', sans-serif;">STREETWEAR</div>
+            <div class="font-code">font-family: 'Aldrich', sans-serif;</div>
+            <div class="selected-badge">SELECIONADO</div>
+        </div>
+
+        <div class="font-option" data-font="Iceberg">
+            <div class="font-name">Iceberg</div>
+            <div class="font-preview" style="font-family: 'Iceberg', cursive;">STREETWEAR</div>
+            <div class="font-code">font-family: 'Iceberg', cursive;</div>
+            <div class="selected-badge">SELECIONADO</div>
+        </div>
+
+        <div class="font-option" data-font="Wallpoet">
+            <div class="font-name">Wallpoet</div>
+            <div class="font-preview" style="font-family: 'Wallpoet', cursive;">STREETWEAR</div>
+            <div class="font-code">font-family: 'Wallpoet', cursive;</div>
+            <div class="selected-badge">SELECIONADO</div>
+        </div>
+
+        <button class="btn-confirm" id="confirmBtn" disabled>CONFIRMAR ESCOLHA</button>
+    </div>
+
+    <script>
+        let selectedFont = null;
+
+        document.querySelectorAll('.font-option').forEach(option => {
+            option.addEventListener('click', () => {
+                // Remove selection from all
+                document.querySelectorAll('.font-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+
+                // Add selection to clicked
+                option.classList.add('selected');
+                selectedFont = option.dataset.font;
+                
+                // Enable confirm button
+                document.getElementById('confirmBtn').disabled = false;
+            });
+        });
+
+        document.getElementById('confirmBtn').addEventListener('click', () => {
+            if (selectedFont) {
+                alert(`Fonte selecionada: ${selectedFont}\n\nAgora vou aplicar esta fonte no site principal.`);
+                // You can copy the font code to clipboard or show it
+                const fontCode = document.querySelector('.font-option.selected .font-code').textContent;
+                console.log('Font code:', fontCode);
+                console.log('Font name:', selectedFont);
+            }
+        });
+    </script>
+</body>
+</html>
+
+
