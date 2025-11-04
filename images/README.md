@@ -33,3 +33,4 @@ Coloque suas imagens nas seguintes pastas:
 - Se alguma imagem não for encontrada, o site mostrará um placeholder automaticamente
 - Certifique-se de que os nomes dos arquivos correspondem exatamente aos nomes especificados acima
 
+
