@@ -1,0 +1,23 @@
+{
+  "name": "fashion-store",
+  "version": "1.0.0",
+  "description": "Template de loja de roupas moderna e responsiva",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8000 -o",
+    "dev": "npx http-server -p 8000 -o -c-1",
+    "serve": "python -m http.server 8000"
+  },
+  "keywords": [
+    "loja",
+    "roupas",
+    "ecommerce",
+    "template",
+    "fashion"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {}
+}
+
+
